@@ -1,13 +1,29 @@
 function commonEnd(a, b) {
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
+  } else if (a[0] === b[0] || a[a.length - 1] === b[b.length - 1]) {
+    return true;
+  } else {
+    return false;
   }
-
-  // write your code here
 }
 
 function endsMeet(values, n) {
-  // write your code here
+  let arr = [];
+  if (!values || values.length < n || n < 0) {
+    return arr;
+  } else {
+    // for (i = n - 1; i === 0; i--) {
+    //   arr.unshift(values[i])
+    // }
+    // for (i = n - 1; i === values.length - 1; i++) {
+    //   arr.push(values[i])
+    // }
+    let firstHalf = values.splice(0, n);
+    let secondHalf = values.splice(values.length - n, values.length -1);
+    arr = firstHalf.concat(secondHalf);
+    return arr;
+  }
 }
 
 function difference(numbers) {
