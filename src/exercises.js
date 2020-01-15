@@ -10,32 +10,57 @@ function commonEnd(a, b) {
 
 function endsMeet(values, n) {
   let arr = [];
+  let valuesOne = values;
+  let valuesTwo = values;
   if (!values || values.length < n || n < 0) {
     return arr;
   } else {
-    // for (i = n - 1; i === 0; i--) {
-    //   arr.unshift(values[i])
-    // }
-    // for (i = n - 1; i === values.length - 1; i++) {
-    //   arr.push(values[i])
-    // }
-    let firstHalf = values.splice(0, n);
-    let secondHalf = values.splice(values.length - n, values.length -1);
+    let firstHalf = valuesOne.splice(0, n);
+    let secondHalf = valuesTwo.splice(values.length - n, values.length -1);
     arr = firstHalf.concat(secondHalf);
     return arr;
   }
 }
 
 function difference(numbers) {
-  // write your code here
+  if (!numbers || numbers.length < 1 || numbers.some(isNaN)) {
+    return undefined;
+  } else {
+    const max = Math.max.apply(Math, numbers);
+    const min = Math.min.apply(Math, numbers);
+    const diff = max - min;
+    return diff;
+  }
 }
 
 function max(number) {
-  // write your code here
+  let arr = [];
+  if (!number || !Number.isInteger(number) || n < 0) {
+    return arr;
+  } else {
+
+  }
 }
 
 function middle(values) {
-  // write your code here
+  let arr = [];
+
+  if (!values || Number.isInteger(values.length / 2) || values.length < 3) {
+    return arr;
+  } else {
+    const startPoint = Math.floor(values.length / 2);
+    if (Number.isInteger(startPoint / 4)) {
+      arr.push(values[startPoint - 1])
+      arr.push(values[startPoint])
+      arr.push(values[startPoint + 1])
+      return arr;
+    } else {
+      arr.push(values[startPoint])
+      arr.push(values[startPoint + 1])
+      arr.push(values[startPoint + 2])
+      return arr;
+    }
+  }
 }
 
 function increasing(numbers) {
