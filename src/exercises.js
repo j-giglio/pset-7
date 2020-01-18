@@ -48,15 +48,7 @@ function middle(values) {
   if (!values || Number.isInteger(values.length / 2) || values.length < 3) {
     return arr;
   } else {
-    let startPoint = values.length / 2;
-    console.log(startPoint)
-    if (Number.isInteger(Math.floor(startPoint) / 2)) {
-      startPoint = Math.floor(startPoint);
-      console.log(startPoint)
-    } else {
-      startPoint = Math.ceil(startPoint);
-      console.log(startPoint)
-    }
+    let startPoint = Math.floor(values.length / 2);
     console.log(startPoint)
     // if (Number.isInteger(startPoint / 4)) {
     //   arr.push(values[startPoint])
@@ -64,11 +56,10 @@ function middle(values) {
     //   arr.push(values[startPoint + 2])
     //   return arr;
     // } else {
-    startPoint -= 1;
-      arr.push(values[startPoint - 1])
-      arr.push(values[startPoint])
-      arr.push(values[startPoint + 1])
-      return arr;
+    arr.push(values[startPoint - 1])
+    arr.push(values[startPoint])
+    arr.push(values[startPoint + 1])
+    return arr;
     // }
   }
 }
