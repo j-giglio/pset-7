@@ -33,12 +33,21 @@ function difference(numbers) {
   }
 }
 
-function max(number) {
-  let arr = [];
-  if (!number || !Number.isInteger(number) || n < 0) {
+function max(numbers) {
+  if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3) {
     return arr;
   } else {
-
+    first = numbers[0];
+    mid = numbers[Math.floor(values.length / 2)];
+    last = [numbers.length - 1];
+    
+    if (first >= mid && first >= last) {
+      return first;
+    } else if (mid >= first && mid >= last) {
+      return mid;
+    } else if (last >= first && last >= mid) {
+      return last;
+    }
   }
 }
 
