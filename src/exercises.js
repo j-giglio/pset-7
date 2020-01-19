@@ -86,12 +86,34 @@ function consecutive(numbers) {
 }
 
 function balance(numbers) {
-  // write your code here
-  console.log("test");
+  if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
+    return false;
+  } else {
+    let stop = false; 
+    for (let i = 0; i < numbers.length - 2 || stop === false; i++) {
+      let secondHalf = numbers;
+      let firstHalf = secondHalf.splice(0, i);
+      let firstSum;
+      let secondSum;
+    
+      firstHalf.forEach(function (num) {
+        firstSum += num;
+      })
+    
+      secondHalf.foEach(function (num) {
+        secondSum += num;
+      })
+    
+      if (firstSum === secondSum) {
+        stop = true;
+      }
+    }
+    return stop;
+  }
 }
 
 function clumps(values) {
-  if (!values || Number.isInteger(values.length / 2) || values.length < 3) {
+  if (!values) {
     return -1;
   } else {
     let counter = 0;
