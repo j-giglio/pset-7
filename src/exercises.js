@@ -92,15 +92,24 @@ function consecutive(numbers) {
   if (!numbers || numbers.length < 3 || !numbers.every(Number.isInteger)){
     return false;
   } else {
-    let stop = false;
+    let stop = false
+    let even = false;
+    let odd = false;
     for (let i = 2; i < numbers.length || stop === false; i++) {
       let arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
       console.log(arr);
       stop = numbers.every(function (e) {
-        return Number.isInteger(e / 2) || !Number.isInteger(e / 2);
+        return Number.isInteger(e / 2);
       });
-      console.log(stop);
+      stop = numbers.every(function (e) {
+        return !Number.isInteger(e / 2);
+      });
+      console.log(even);
+      console.log(odd);
+      if (even === true || odd === true) {
+        stop = true;
+      }
     }
     return stop;
   }
