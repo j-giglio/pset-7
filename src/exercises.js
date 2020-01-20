@@ -48,7 +48,7 @@ function max(numbers) {
     return undefined;
   } else {
     first = numbers[0];
-    mid = numbers[Math.floor(values.length / 2)];
+    mid = numbers[Math.floor(numbers.length / 2)];
     last = [numbers.length - 1];
     
     if (first >= mid && first >= last) {
