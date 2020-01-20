@@ -11,13 +11,23 @@ function commonEnd(a, b) {
 function endsMeet(values, n) {
   let arr = [];
   let valuesOne = values;
+        console.log(valuesOne);
+
   let valuesTwo = values;
+        console.log(valuesTwo);
+
   if (!values || values.length < n || n < 0) {
     return arr;
   } else {
     let firstHalf = valuesOne.splice(0, n);
+          console.log(firstHalf);
+
     let secondHalf = valuesTwo.splice(values.length - n, values.length -1);
+          console.log(secondHalf);
+
     arr = firstHalf.concat(secondHalf);
+          console.log(arr);
+
     return arr;
   }
 }
@@ -93,15 +103,18 @@ function balance(numbers) {
     for (let i = 0; i < numbers.length - 2 || stop === false; i++) {
       let secondHalf = numbers;
       let firstHalf = secondHalf.splice(0, i);
+      console.log(firstHalf);
       let firstSum;
       let secondSum;
     
       firstHalf.forEach(function (num) {
         firstSum += num;
+              console.log(firstSum);
       })
     
       secondHalf.forEach(function (num) {
         secondSum += num;
+              console.log(secondSum);
       })
     
       if (firstSum === secondSum) {
