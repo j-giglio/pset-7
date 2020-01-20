@@ -100,7 +100,7 @@ function balance(numbers) {
         firstSum += num;
       })
     
-      secondHalf.foEach(function (num) {
+      secondHalf.forEach(function (num) {
         secondSum += num;
       })
     
