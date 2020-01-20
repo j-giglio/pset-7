@@ -96,6 +96,7 @@ function consecutive(numbers) {
   if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
     return false;
   } else {}
+}
 
 function balance(numbers) {
   if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
