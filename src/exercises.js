@@ -89,7 +89,7 @@ function everywhere(values, x) {
 }
 
 function consecutive(numbers) {
-  if (!numbers || numbers.length < 3 || numbers.some(Number.isInteger)){
+  if (!numbers || numbers.length < 3 || !numbers.every(Number.isInteger)){
     return false;
   } else {
     let stop = false;
