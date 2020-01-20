@@ -47,9 +47,9 @@ function max(numbers) {
   if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3 || !numbers.some(Number.isInteger)) {
     return undefined;
   } else {
-    const first = numbers[0];
-    const mid = numbers[Math.floor(numbers.length / 2)];
-    const last = [numbers.length];
+    const first = Number(numbers[0]);
+    const mid = Number(numbers[Math.floor(numbers.length / 2)]);
+    const last = Number([numbers.length]);
     console.log(last);
     
     if (first >= mid && first >= last) {
