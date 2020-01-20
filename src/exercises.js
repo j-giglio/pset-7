@@ -50,6 +50,7 @@ function max(numbers) {
     const first = numbers[0];
     const mid = numbers[Math.floor(numbers.length / 2)];
     const last = [numbers.length - 1];
+    console.log(last);
     
     if (first >= mid && first >= last) {
       return first;
