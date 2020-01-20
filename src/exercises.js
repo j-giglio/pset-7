@@ -45,7 +45,7 @@ function difference(numbers) {
 
 function max(numbers) {
   if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3) {
-    return arr;
+    return undefined;
   } else {
     first = numbers[0];
     mid = numbers[Math.floor(values.length / 2)];
