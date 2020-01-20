@@ -49,7 +49,7 @@ function max(numbers) {
   } else {
     const first = numbers[0];
     const mid = numbers[Math.floor(numbers.length / 2)];
-    const last = [numbers.length - 1];
+    const last = [numbers.length];
     console.log(last);
     
     if (first >= mid && first >= last) {
