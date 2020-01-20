@@ -96,9 +96,11 @@ function consecutive(numbers) {
     for (let i = 2; i < numbers.length || stop === false; i++) {
       arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
+      console.log(arr);
       stop = numbers.every(function (e) {
         return Number.isInteger(e / 2) || !Number.isInteger(e / 2);
       });
+      console.log(stop);
     }
     return stop;
   }
