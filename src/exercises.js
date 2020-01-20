@@ -44,7 +44,7 @@ function difference(numbers) {
 }
 
 function max(numbers) {
-  if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3 || !numbers.every(Number.isInteger)) {
+  if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3 || !Number.isInteger(numbers) {
     return undefined;
   } else {
     const first = numbers[0];
@@ -93,8 +93,9 @@ function everywhere(values, x) {
 }
 
 function consecutive(numbers) {
-  // write your code here
-}
+  if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
+    return false;
+  } else {}
 
 function balance(numbers) {
   if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
