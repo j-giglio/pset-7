@@ -44,7 +44,7 @@ function difference(numbers) {
 }
 
 function max(numbers) {
-  if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3 || !Number.isInteger(numbers)) {
+  if (!numbers || Number.isInteger(numbers.length / 2) || numbers.length < 3 || !numbers.some(Number.isInteger) {
     return undefined;
   } else {
     const first = numbers[0];
@@ -53,10 +53,13 @@ function max(numbers) {
     console.log(last);
     
     if (first >= mid && first >= last) {
+      console.log(typeof first);
       return first;
     } else if (mid >= first && mid >= last) {
+      console.log(typeof mid);
       return mid;
     } else if (last >= first && last >= mid) {
+      console.log(typeof last);
       return last;
     }
   }
@@ -69,13 +72,6 @@ function middle(values) {
     return arr;
   } else {
     let startPoint = Math.floor(values.length / 2);
-    console.log(startPoint)
-    // if (Number.isInteger(startPoint / 4)) {
-    //   arr.push(values[startPoint])
-    //   arr.push(values[startPoint + 1])
-    //   arr.push(values[startPoint + 2])
-    //   return arr;
-    // } else {
     arr.push(values[startPoint - 1])
     arr.push(values[startPoint])
     arr.push(values[startPoint + 1])
@@ -93,13 +89,21 @@ function everywhere(values, x) {
 }
 
 function consecutive(numbers) {
-  if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
+  if (!numbers || numbers.length < 3 || numbers.some(Number.isInteger)){
     return false;
-  } else {}
+  } else {
+    for (let i = 2; i < numbers.length; i++) {
+      arr = [];
+      arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
+      if (Number.isInteger(numbers.every / 2)) {
+        
+      }
+    }
+  }
 }
 
 function balance(numbers) {
-  if (!numbers || numbers.length < 2 || Number.isInteger(numbers)){
+  if (!numbers || numbers.length < 2 || numbers.some(Number.isInteger)){
     return false;
   } else {
     let stop = false; 
