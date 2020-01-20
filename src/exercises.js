@@ -92,13 +92,15 @@ function consecutive(numbers) {
   if (!numbers || numbers.length < 3 || numbers.some(Number.isInteger)){
     return false;
   } else {
-    for (let i = 2; i < numbers.length; i++) {
+    let stop = false;
+    for (let i = 2; i < numbers.length || stop === false; i++) {
       arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
-      if (Number.isInteger(numbers.every / 2)) {
-        
-      }
+      stop = numbers.every(function (e) {
+        return Number.isInteger(e / 2) || !Number.isInteger(e / 2);
+      });
     }
+    return stop;
   }
 }
 
