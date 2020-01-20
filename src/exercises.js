@@ -104,8 +104,8 @@ function balance(numbers) {
       let secondHalf = numbers;
       let firstHalf = secondHalf.splice(0, i);
       console.log(firstHalf);
-      let firstSum;
-      let secondSum;
+      let firstSum = 0;
+      let secondSum = 0;
     
       firstHalf.forEach(function (num) {
         firstSum += num;
