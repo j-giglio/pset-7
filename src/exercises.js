@@ -94,7 +94,7 @@ function consecutive(numbers) {
   } else {
     let stop = false;
     for (let i = 2; i < numbers.length || stop === false; i++) {
-      arr = [];
+      let arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
       console.log(arr);
       stop = numbers.every(function (e) {
