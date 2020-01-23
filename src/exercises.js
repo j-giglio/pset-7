@@ -81,7 +81,31 @@ function middle(values) {
 }
 
 function increasing(numbers) {
-  // write your code here
+  if (numbers == undefined || numbers.length < 3 || numbers.every(isNaN) ||  !numbers.every(Number.isInteger)) {
+    return false;
+  } else {
+
+    var counter = 0;
+    var currentNum = 0;
+
+    for (var i = 0; i < numbers.length; i++) {
+      if (i == 0) {
+        counter = 1;
+        currentNum = numbers[i];
+      } else if (numbers[i] == currentNum + 1) {
+        counter++;
+      } else {
+        counter = 1;
+      }
+
+      if (counter == 3) {
+        return true;
+      }
+      currentNum = numbers[i];
+    }
+  }
+
+  return false;
 }
 
 function everywhere(values, x) {
