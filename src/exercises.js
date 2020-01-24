@@ -44,12 +44,8 @@ function max(numbers) {
     return undefined;
   } else {
     const first = Number(numbers[0]);
-    console.log("first: " + first);
     const mid = Number(numbers[Math.floor(numbers.length / 2)]);
-        console.log("mid: " + mid);
     const last = Number(numbers[numbers.length - 1]);
-        console.log("last: " + last);
-
     
     if (first >= mid && first >= last) {
       return first;
@@ -138,7 +134,9 @@ function balance(numbers) {
     let stop = false; 
     for (let i = 0; i < numbers.length || stop === false; i++) {
       let secondHalf = numbers;
+      console.log("secondHalf" + secondHalf)
       let firstHalf = secondHalf.splice(0, i);
+      console.log("firstHalf" + firstHalf)
       let firstSum = 0;
       let secondSum = 0;
     
