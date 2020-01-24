@@ -154,7 +154,7 @@ function balance(numbers) {
 //     }
 //     return stop;
 //   }
-if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(isInteger)){
+if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
     return false;
   } else {
 
