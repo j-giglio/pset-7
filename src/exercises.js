@@ -21,8 +21,8 @@ function endsMeet(values, n) {
   } else {
     let firstHalf = valuesOne.splice(0, n);
           console.log("firstHalf: " + firstHalf);
-
-    let secondHalf = valuesTwo.splice(values.length - n, values.length - 1);
+    let length = values.length;
+    let secondHalf = valuesTwo.splice(length - n, length - 1);
           console.log("secondHalf: " + secondHalf);
     console.log("values.length - n: " + values.length - n);
     console.log("values.length - 1: " + values.length - 1);
