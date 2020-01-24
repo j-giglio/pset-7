@@ -134,9 +134,9 @@ function balance(numbers) {
     let stop = false; 
     for (let i = 0; i < numbers.length || stop === false; i++) {
       let secondHalf = numbers;
-      console.log("secondHalf" + secondHalf)
+      console.log("secondHalf: " + secondHalf)
       let firstHalf = secondHalf.splice(0, i);
-      console.log("firstHalf" + firstHalf)
+      console.log("firstHalf: " + firstHalf)
       let firstSum = 0;
       let secondSum = 0;
     
