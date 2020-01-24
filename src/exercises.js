@@ -45,7 +45,7 @@ function max(numbers) {
   } else {
     const first = Number(numbers[0]);
     const mid = Number(numbers[Math.floor(numbers.length / 2)]);
-    const last = Number([numbers.length]);
+    const last = Number(numbers[numbers.length]);
     
     if (first >= mid && first >= last) {
       return first;
