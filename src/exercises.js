@@ -19,16 +19,6 @@ function endsMeet(values, n) {
   if (!values || values.length < n || n < 0) {
     return arr;
   } else {
-//     let firstHalf = valuesOne.splice(0, n);
-//           console.log("firstHalf: " + firstHalf);
-//     let length = values.length;
-//     let secondHalf = valuesTwo.splice(length - n, length - 1);
-//           console.log("secondHalf: " + secondHalf);
-//     console.log("values.length - n: " + values.length - n);
-//     console.log("values.length - 1: " + values.length - 1);
-
-//     arr = firstHalf.concat(secondHalf);
-//           console.log("arr: " + arr);
     for (let i = 0; i < n; i++) {
       arr.push(values[i]);
     }
@@ -84,7 +74,6 @@ function middle(values) {
     arr.push(values[startPoint])
     arr.push(values[startPoint + 1])
     return arr;
-    // }
   }
 }
 
@@ -93,23 +82,23 @@ function increasing(numbers) {
     return false;
   } else {
 
-    var counter = 0;
-    var currentNum = 0;
+    let j = 0;
+    let startPoint = 0;
 
-    for (var i = 0; i < numbers.length; i++) {
-      if (i == 0) {
-        counter = 1;
-        currentNum = numbers[i];
-      } else if (numbers[i] == currentNum + 1) {
-        counter++;
+    for (let i = 0; i < numbers.length; i++) {
+      if (i === 0) {
+        j = 1;
+        startPoint = numbers[i];
+      } else if (numbers[i] === startPoint + 1) {
+        j++;
       } else {
-        counter = 1;
+        j = 1;
       }
 
-      if (counter == 3) {
+      if (j == 3) {
         return true;
       }
-      currentNum = numbers[i];
+      startPoint = numbers[i];
     }
   }
 
@@ -131,10 +120,10 @@ function consecutive(numbers) {
       let arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
       console.log(arr);
-      stop = numbers.every(function (e) {
+      even = numbers.every(function (e) {
         return Number.isInteger(e / 2);
       });
-      stop = numbers.every(function (e) {
+      odd = numbers.every(function (e) {
         return !Number.isInteger(e / 2);
       });
       console.log(even);
