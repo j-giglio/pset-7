@@ -128,7 +128,7 @@ function consecutive(numbers) {
 }
 
 function balance(numbers) {
-  if (!numbers || numbers.length < 2 || numbers.some(Number.isInteger)){
+  if (!numbers || numbers.length < 2 || !numbers.every(Number.isInteger)){
     return false;
   } else {
     let stop = false; 
