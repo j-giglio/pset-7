@@ -11,10 +11,8 @@ function commonEnd(a, b) {
 function endsMeet(values, n) {
   let arr = [];
   let valuesOne = values;
-        console.log("valuesOne: " + valuesOne);
 
   let valuesTwo = values;
-        console.log("valuesTwo: " + valuesTwo);
 
   if (!values || values.length < n || n < 0) {
     return arr;
@@ -48,16 +46,12 @@ function max(numbers) {
     const first = Number(numbers[0]);
     const mid = Number(numbers[Math.floor(numbers.length / 2)]);
     const last = Number([numbers.length]);
-    console.log(last);
     
     if (first >= mid && first >= last) {
-      console.log(typeof first);
       return first;
     } else if (mid >= first && mid >= last) {
-      console.log(typeof mid);
       return mid;
     } else if (last >= first && last >= mid) {
-      console.log(typeof last);
       return last;
     }
   }
@@ -119,15 +113,12 @@ function consecutive(numbers) {
     for (let i = 2; i < numbers.length || stop === false; i++) {
       let arr = [];
       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
-      console.log(arr);
       even = numbers.every(function (e) {
         return Number.isInteger(e / 2);
       });
       odd = numbers.every(function (e) {
         return !Number.isInteger(e / 2);
       });
-      console.log(even);
-      console.log(odd);
       if (even === true || odd === true) {
         stop = true;
       }
@@ -144,18 +135,15 @@ function balance(numbers) {
     for (let i = 0; i < numbers.length || stop === false; i++) {
       let secondHalf = numbers;
       let firstHalf = secondHalf.splice(0, i);
-      console.log(firstHalf);
       let firstSum = 0;
       let secondSum = 0;
     
       firstHalf.forEach(function (num) {
         firstSum += num;
-              console.log(firstSum);
       })
     
       secondHalf.forEach(function (num) {
         secondSum += num;
-              console.log(secondSum);
       })
     
       if (firstSum === secondSum) {
