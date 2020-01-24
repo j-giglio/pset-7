@@ -154,40 +154,42 @@ function balance(numbers) {
 //     }
 //     return stop;
 //   }
-if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
-    return false;
-  } else {
 
-    var left = 0;
-    var right = 0;
+  
+// if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
+//     return false;
+//   } else {
 
-    for (var x = 0; x < numbers.length; x++) {
-      right += numbers[x];
-    }
+//     var left = 0;
+//     var right = 0;
 
-    for (var i = 0; i < numbers.length - 1; i++) {
+//     for (var x = 0; x < numbers.length; x++) {
+//       right += numbers[x];
+//     }
 
-        if (left != right) {
-          left += numbers[i];
-          right -= numbers[i];
-        }
-    }
-    return left == right;
-  }
-}
+//     for (var i = 0; i < numbers.length - 1; i++) {
 
-function clumps(values) {
-  if (!values) {
-    return -1;
-  } else {
-    let counter = 0;
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] === values[i + 1] && values[i] !== values[i - 1]) {
-        counter++
-      }
-    }
-    return counter;
-  }
+//         if (left != right) {
+//           left += numbers[i];
+//           right -= numbers[i];
+//         }
+//     }
+//     return left == right;
+//   }
+// }
+
+// function clumps(values) {
+//   if (!values) {
+//     return -1;
+//   } else {
+//     let counter = 0;
+//     for (let i = 0; i < values.length; i++) {
+//       if (values[i] === values[i + 1] && values[i] !== values[i - 1]) {
+//         counter++
+//       }
+//     }
+//     return counter;
+//   }
 }
 
 /*
