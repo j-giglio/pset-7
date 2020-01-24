@@ -47,7 +47,7 @@ function max(numbers) {
     console.log("first: " + first);
     const mid = Number(numbers[Math.floor(numbers.length / 2)]);
         console.log("mid: " + mid);
-    const last = Number(numbers[numbers.length]);
+    const last = Number(numbers[numbers.length - 1]);
         console.log("last: " + last);
 
     
