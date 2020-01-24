@@ -24,6 +24,8 @@ function endsMeet(values, n) {
 
     let secondHalf = valuesTwo.splice(values.length - n, values.length - 1);
           console.log("secondHalf: " + secondHalf);
+    console.log("values.length - n: " + values.length - n);
+    console.log("values.length - 1: " + values.length - 1);
 
     arr = firstHalf.concat(secondHalf);
           console.log("arr: " + arr);
