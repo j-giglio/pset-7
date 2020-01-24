@@ -128,31 +128,51 @@ function consecutive(numbers) {
 }
 
 function balance(numbers) {
-  if (!numbers || numbers.length < 2 || !numbers.every(Number.isInteger)){
+//   if (!numbers || numbers.length < 2 || !numbers.every(Number.isInteger)){
+//     return false;
+//   } else {
+//     let stop = false; 
+//     for (let i = 0; i < numbers.length || stop === false; i++) {
+//       let secondHalf = numbers;
+//       console.log("secondHalf: " + secondHalf)
+//       let firstHalf = secondHalf.splice(0, i);
+//       console.log("firstHalf: " + firstHalf)
+//       let firstSum = 0;
+//       let secondSum = 0;
+    
+//       firstHalf.forEach(function (num) {
+//         firstSum += num;
+//       })
+    
+//       secondHalf.forEach(function (num) {
+//         secondSum += num;
+//       })
+    
+//       if (firstSum === secondSum) {
+//         stop = true;
+//       }
+//     }
+//     return stop;
+//   }
+if (!numbers || numbers.length < 2 || !numbers.every(isNumber) || !numbers.every(isAnInteger)){
     return false;
   } else {
-    let stop = false; 
-    for (let i = 0; i < numbers.length || stop === false; i++) {
-      let secondHalf = numbers;
-      console.log("secondHalf: " + secondHalf)
-      let firstHalf = secondHalf.splice(0, i);
-      console.log("firstHalf: " + firstHalf)
-      let firstSum = 0;
-      let secondSum = 0;
-    
-      firstHalf.forEach(function (num) {
-        firstSum += num;
-      })
-    
-      secondHalf.forEach(function (num) {
-        secondSum += num;
-      })
-    
-      if (firstSum === secondSum) {
-        stop = true;
-      }
+
+    var left = 0;
+    var right = 0;
+
+    for (var x = 0; x < numbers.length; x++) {
+      right += numbers[x];
     }
-    return stop;
+
+    for (var i = 0; i < numbers.length - 1; i++) {
+
+        if (left != right) {
+          left += numbers[i];
+          right -= numbers[i];
+        }
+    }
+    return left == right;
   }
 }
 
