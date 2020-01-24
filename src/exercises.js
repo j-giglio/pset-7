@@ -22,7 +22,7 @@ function endsMeet(values, n) {
     let firstHalf = valuesOne.splice(0, n);
           console.log("firstHalf: " + firstHalf);
 
-    let secondHalf = valuesTwo.splice(values.length - n, values.length -1);
+    let secondHalf = valuesTwo.splice(values.length - n, values.length - 1);
           console.log("secondHalf: " + secondHalf);
 
     arr = firstHalf.concat(secondHalf);
