@@ -11,22 +11,22 @@ function commonEnd(a, b) {
 function endsMeet(values, n) {
   let arr = [];
   let valuesOne = values;
-        console.log(valuesOne);
+        console.log("valuesOne: " + valuesOne);
 
   let valuesTwo = values;
-        console.log(valuesTwo);
+        console.log("valuesTwo: " + valuesTwo);
 
   if (!values || values.length < n || n < 0) {
     return arr;
   } else {
     let firstHalf = valuesOne.splice(0, n);
-          console.log(firstHalf);
+          console.log("firstHalf: " + firstHalf);
 
     let secondHalf = valuesTwo.splice(values.length - n, values.length -1);
-          console.log(secondHalf);
+          console.log("secondHalf: " + secondHalf);
 
     arr = firstHalf.concat(secondHalf);
-          console.log(arr);
+          console.log("arr: " + arr);
 
     return arr;
   }
