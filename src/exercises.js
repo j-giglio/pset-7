@@ -141,7 +141,7 @@ function balance(numbers) {
     return false;
   } else {
     let stop = false; 
-    for (let i = 0; i < numbers.length - 2 || stop === false; i++) {
+    for (let i = 0; i < numbers.length || stop === false; i++) {
       let secondHalf = numbers;
       let firstHalf = secondHalf.splice(0, i);
       console.log(firstHalf);
