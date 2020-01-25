@@ -107,9 +107,9 @@ function everywhere(values, x) {
     let answer = true;
     
     for (let i = 1; i < values.length -1; i++) {
-      console.log(i);
-      console.log(i - 1);
-      console.log(i + 1);
+      console.log(values[i]);
+      console.log(values[i - 1]);
+      console.log(values[i + 1]);
       answer = values[i] === x || values[i - 1] === x || values[i + 1] === x;
     }
     console.log("*********");
