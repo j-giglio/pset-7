@@ -112,7 +112,7 @@ function everywhere(values, x) {
       console.log(i + 1);
       answer = values[i] === x || values[i - 1] === x || values[i + 1] === x;
     }
-    
+    console.log("*********");
     return answer;
     
   }
