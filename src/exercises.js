@@ -72,7 +72,7 @@ function middle(values) {
 }
 
 function increasing(numbers) {
-  if (numbers == undefined || numbers.length < 3 || numbers.every(isNaN) ||  !numbers.every(Number.isInteger)) {
+  if (!numbers || numbers.length < 3 || numbers.every(isNaN) ||  !numbers.every(Number.isInteger)) {
     return false;
   } else {
 
@@ -89,7 +89,7 @@ function increasing(numbers) {
         j = 1;
       }
 
-      if (j == 3) {
+      if (j === 3) {
         return true;
       }
       startPoint = numbers[i];
@@ -100,7 +100,7 @@ function increasing(numbers) {
 }
 
 function everywhere(values, x) {
-  if (!values || values.length < 1 || x == 0) {
+  if (!values || values.length < 1 || x === 0) {
     return false;
   } else {
     
@@ -134,34 +134,7 @@ function consecutive(numbers) {
 }
 
 function balance(numbers) {
-//   if (!numbers || numbers.length < 2 || !numbers.every(Number.isInteger)){
-//     return false;
-//   } else {
-//     let stop = false; 
-//     for (let i = 0; i < numbers.length || stop === false; i++) {
-//       let secondHalf = numbers;
-//       console.log("secondHalf: " + secondHalf)
-//       let firstHalf = secondHalf.splice(0, i);
-//       console.log("firstHalf: " + firstHalf)
-//       let firstSum = 0;
-//       let secondSum = 0;
-    
-//       firstHalf.forEach(function (num) {
-//         firstSum += num;
-//       })
-    
-//       secondHalf.forEach(function (num) {
-//         secondSum += num;
-//       })
-    
-//       if (firstSum === secondSum) {
-//         stop = true;
-//       }
-//     }
-//     return stop;
-//   }
 
-  
 if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
     return false;
   } else {
@@ -180,7 +153,7 @@ if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Numb
           right -= numbers[i];
         }
     }
-    return left == right;
+    return left === right;
   }
 }
 
