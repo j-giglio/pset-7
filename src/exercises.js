@@ -107,7 +107,7 @@ function everywhere(values, x) {
     let answer = true;
     
     for (let i = 1; i < values.length -1; i++) {
-      answer = values[i] === x && values[i - 1] === x && values[i + 1] === x;
+      answer = values[i] === x || values[i - 1] === x || values[i + 1] === x;
     }
     
     return answer;
