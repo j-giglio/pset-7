@@ -119,23 +119,26 @@ function consecutive(numbers) {
   if (!numbers || numbers.length < 3 || !numbers.every(Number.isInteger)){
     return false;
   } else {
-    let stop = false
+    let answer = false
     let even = false;
     let odd = false;
-    for (let i = 2; i < numbers.length || stop === false; i++) {
-      let arr = [];
-      arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
-      even = numbers.every(function (e) {
-        return Number.isInteger(e / 2);
-      });
-      odd = numbers.every(function (e) {
-        return !Number.isInteger(e / 2);
-      });
-      if (even === true || odd === true) {
-        stop = true;
-      }
+    for (let i = 2; i < numbers.length && answer === false; i++) {
+//       let arr = [];
+//       arr.push(numbers[i], numbers[i - 1], numbers[i - 2]);
+//       even = numbers.every(function (e) {
+//         return Number.isInteger(e / 2);
+//       });
+//       odd = numbers.every(function (e) {
+//         return !Number.isInteger(e / 2);
+//       });
+//       if (even === true || odd === true) {
+//         stop = true;
+//       }
+//       even = (numbers[i] % 2 === 0 && numbers[i - 1] % 2 === 0 && numbers[i - 2] % 2 === 0) ? true : false;
+//       odd = (numbers[i] % 2 !== 0 && numbers[i - 1] % 2 !== 0 && numbers[i - 2] % 2 !== 0) ? true : false;
+      answer = (numbers[i] % 2 === 0 && numbers[i - 1] % 2 === 0 && numbers[i - 2] % 2 === 0) || (numbers[i] % 2 !== 0 && numbers[i - 1] % 2 !== 0 && numbers[i - 2] % 2 !== 0)
     }
-    return stop;
+    return answer;
   }
 }
 
