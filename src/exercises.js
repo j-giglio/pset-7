@@ -100,7 +100,19 @@ function increasing(numbers) {
 }
 
 function everywhere(values, x) {
-  // write your code here
+  if (!values || values.length < 1 || x == 0) {
+    return false;
+  } else {
+    
+    let answer = true;
+    
+    for (let i = 1; i < values.length -1; i++) {
+      answer = values[i] === x && values[i - 1] === x && values[i + 1] === x;
+    }
+    
+    return answer;
+    
+  }
 }
 
 function consecutive(numbers) {
@@ -156,40 +168,40 @@ function balance(numbers) {
 //   }
 
   
-// if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
-//     return false;
-//   } else {
+if (!numbers || numbers.length < 2 || numbers.some(isNaN) || !numbers.every(Number.isInteger)){
+    return false;
+  } else {
 
-//     var left = 0;
-//     var right = 0;
+    let left = 0;
+    let right = 0;
 
-//     for (var x = 0; x < numbers.length; x++) {
-//       right += numbers[x];
-//     }
+    for (let x = 0; x < numbers.length; x++) {
+      right += numbers[x];
+    }
 
-//     for (var i = 0; i < numbers.length - 1; i++) {
+    for (let i = 0; i < numbers.length - 1; i++) {
 
-//         if (left != right) {
-//           left += numbers[i];
-//           right -= numbers[i];
-//         }
-//     }
-//     return left == right;
-//   }
-// }
+        if (left != right) {
+          left += numbers[i];
+          right -= numbers[i];
+        }
+    }
+    return left == right;
+  }
+}
 
-// function clumps(values) {
-//   if (!values) {
-//     return -1;
-//   } else {
-//     let counter = 0;
-//     for (let i = 0; i < values.length; i++) {
-//       if (values[i] === values[i + 1] && values[i] !== values[i - 1]) {
-//         counter++
-//       }
-//     }
-//     return counter;
-//   }
+function clumps(values) {
+  if (!values) {
+    return -1;
+  } else {
+    let counter = 0;
+    for (let i = 0; i < values.length; i++) {
+      if (values[i] === values[i + 1] && values[i] !== values[i - 1]) {
+        counter++
+      }
+    }
+    return counter;
+  }
 }
 
 /*
